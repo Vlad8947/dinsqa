@@ -1,8 +1,8 @@
 # dinsqa
 
 This is a test application for "Phone Book" web-service.
-After work will be done, will creates directory "reports" in which
-will be report file "user_test.html".
+After work will be done, the "reports" directory will be created, which
+will be contain the "user_test.html" report file.
 
 There will also be a "testng" directory with its report files.
 
