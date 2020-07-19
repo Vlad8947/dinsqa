@@ -9,6 +9,8 @@ There will also be a "testng" directory with its report files.
 ### Launch ###
 You will need Java 11 and the "Phone Book" web-service running.
 
+Download the "dinsqa.jar" file.
+
 Execute a command:
  ```
   java -jar dinsqa.jar
