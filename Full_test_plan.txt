@@ -1,0 +1,76 @@
+1) /users GET
+- resoponse code 200 with users in json body
+
+2) /users POST
+- request with user in json which id = 0;
+response code 201 with user in json which was in request
+- request with existing user id;
+response code 201 with user in json which was in request
+- request with incorrect validation;
+response code 400 with incorrect fields in json
+- request without user field;
+response code 400 with missing fields in json
+
+3) /users/{userId} GET
+- request existing user;
+response with user in json
+- request non existing user;
+response code 404
+
+4) /users/{userId} PUT
+- request with existing id and user in json;
+response code 200 with user in json
+- request with non existing id;
+response code 404
+- request with incorrect validation;
+response code 400 with incorrect fields in json
+- request without field of user;
+response code 400 with missing fields in json
+
+5) /users/{userId} DELETE
+- request with existing id;
+response code 202
+- request with non existing id;
+response code 404
+
+6) /users/search GET, query_params: name
+- request with existing name;
+response code 200 with users in json which firstName starts with name ignoring case
+- request with non existing name;
+response code 404
+- request with empty name;
+response code 200 with users in json
+- request without name parameter;
+response code 400
+
+7) /users/{userId}/contacts GET
+- request with existing user id;
+response code 200 with contacts in json
+- request with non existing id;
+response code 404
+
+8) /users/{userId}/contacts POST
+- request with contact in json;
+response code 201 with new contact in json
+- request with contact in json which id is exist;
+response code 201 with edited contact in json
+- request without field of contact;
+response code 400 with missing fields in json
+
+9) /users/{userId}/contacts/{contactId} GET
+- request with existing ids;
+response code 200 with contact in json
+- request with non existing ids;
+response code 404
+
+10) /users/{userId}/contacts/{contactId} PUT
+- request with existing ids and contact in json;
+response code 200 with updated contact
+- request without field of contact;
+response code 400 with missing fields in json
+
+11) /users/{userId}/contacts/{contactId} DELETE
+- request with existing ids;
+response code 202
+- request with non existing ids;
+response code 404
